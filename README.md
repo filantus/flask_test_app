@@ -16,9 +16,10 @@ Test Application based on Flask and SQLAlchemy
     sudo ./configure && sudo make && sudo make install && sudo rm -rf /tmp/*
 ```
 
-`sudo pip3 install virtualenv`
-`sudo python3 -m virtualenv ./.venv`
-`sudo ./.venv/bin/python ./.venv/bin/pip install -r requirments.txt`
+```sudo pip3 install virtualenv
+sudo python3 -m virtualenv ./.venv
+sudo ./.venv/bin/python ./.venv/bin/pip install -r requirments.txt
+```
 
 ### Тесты
 `./.venv/bin/python ./.venv/bin/pytest -W error::UserWarning`
