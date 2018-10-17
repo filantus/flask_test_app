@@ -9,10 +9,10 @@ pip install -r requirments.txt
 ```
 
 ### Тесты
-pytest -W error::UserWarning
+`pytest -W error::UserWarning`
 
 ### Запуск сервера
-python main.py
+`python main.py`
 
 ## Запуск на Ubuntu 16.04 с Python 3.7
 
