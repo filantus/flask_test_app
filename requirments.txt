@@ -1,0 +1,5 @@
+Flask==1.0.2
+SQLAlchemy==1.2.12
+sqlalchemy-mixins==0.2.3
+SQLAlchemy-Utils==0.33.6
+pytest==3.8.2

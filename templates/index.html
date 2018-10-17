@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="flex-container">
+    <form method="post" action="/api/car">
+        Добавить машину
+        <table>
+            <tr>
+                <td><input id="input_color" name="color" type="text" /></td>
+                <td><label for="input_color">Цвет</label></td>
+            </tr>
+            <tr>
+                <td><input id="input_trip" name="trip" type="text" /></td>
+                <td><label for="input_trip">Пробег</label></td>
+            </tr>
+            <tr>
+                <td><input id="input_year" name="year" type="text" /></td>
+                <td><label for="input_year">Год</label></td>
+            </tr>
+            <tr>
+                <td><input id="input_model" name="model" type="text" /></td>
+                <td><label for="input_model">Модель</label></td>
+            </tr>
+            <tr>
+                <td><input id="input_vendor" name="vendor" type="text" /></td>
+                <td><label for="input_vendor">Производитель</label></td>
+            </tr>
+        </table>
+        <input type="submit" value="Добавить">
+    </form>
+
+    <form method="post" action="/api/component">
+        Добавить деталь
+        <table>
+            <tr>
+                <td><input id="input_component_type" name="type" type="text" /></td>
+                <td><label for="input_component_type">Тип</label></td>
+            </tr>
+            <tr>
+                <td><input id="input_component_number" name="number" type="text" /></td>
+                <td><label for="input_component_number">Номер</label></td>
+            </tr>
+            <tr>
+                <td><input id="input_component_car_uid" name="car_uid" type="text" /></td>
+                <td><label for="input_component_car_uid">UUID машины</label></td>
+            </tr>
+        </table>
+        <input type="submit" value="Добавить">
+    </form>
+</div>
+
+<div class="flex-container">
+    <div id="cars">
+        {% for car in cars %}
+            <a href="/api/car/{{ car.uid }}">{{ car }}</a>
+        {% endfor %}
+    </div>
+    <div id="components">
+        {% for component in components %}
+            <a href="/api/component/{{ component.uid }}">{{ component }}</a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
