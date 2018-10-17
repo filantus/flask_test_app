@@ -1,6 +1,19 @@
 ## flask_test_app
 Test Application based on Flask and SQLAlchemy
 
+## Запуск в Docker
+```
+docker run --name flask_app_test --rm -v $PWD:/app -p 80:80 -it python:3.7-slim-stretch bash
+cd /app
+pip install -r requirments.txt
+```
+
+### Тесты
+pytest -W error::UserWarning
+
+### Запуск сервера
+python main.py
+
 ## Запуск на Ubuntu 16.04 с Python 3.7
 
 `sudo apt-get update && sudo apt-get upgrade`
